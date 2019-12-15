@@ -33,6 +33,7 @@ RUN apk add --update --no-cache --virtual .build-deps \
   && ln -sf /dev/stderr /var/log/domain_stats/domain_stats.log \
   && adduser -Ds /bin/sh domain_stats \
   && chown -R domain_stats: /opt/domain_stats2 \
+  && cd /opt/domain_stats2 \
   && echo y | /usr/bin/python3 /opt/domain_stats2/database_admin.py --rebuild
 
 USER domain_stats
