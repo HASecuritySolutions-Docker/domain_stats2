@@ -42,4 +42,4 @@ EXPOSE 8000
 
 STOPSIGNAL SIGTERM
 
-CMD /usr/bin/python3 /opt/domain_stats2/domain_stats.py
+CMD cd /opt/domain_stats2 && /usr/bin/python3 /opt/domain_stats2/domain_stats.py
