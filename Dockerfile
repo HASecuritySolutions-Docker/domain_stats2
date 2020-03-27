@@ -6,7 +6,7 @@ RUN apt update \
   && apt install python3-pip -y \
   && pip3 install pyyaml rdap domain_stats \
   && apt clean \
-  && adduser -Ds /bin/sh domain_stats
+  && useradd -ms /bin/bash domain_stats
 
 USER domain_stats
 
