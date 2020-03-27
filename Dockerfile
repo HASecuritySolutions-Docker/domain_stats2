@@ -7,6 +7,7 @@ RUN apt update \
   && pip3 install pyyaml rdap domain_stats \
   && apt clean \
   && useradd -ms /bin/bash domain_stats
+COPY data /
 
 USER domain_stats
 
