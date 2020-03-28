@@ -6,8 +6,9 @@ RUN apt update \
   && apt install python3-pip -y \
   && pip3 install pyyaml rdap domain_stats \
   && apt clean \
+  && mkdir -p /etc/domain_stats \
   && useradd -ms /bin/bash domain_stats
-COPY data /
+COPY data /etc/domain_stats/
 
 USER domain_stats
 
