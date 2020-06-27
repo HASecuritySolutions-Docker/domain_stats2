@@ -24,6 +24,6 @@ target_updates: https://raw.githubusercontent.com/MarkBaggett/domain_stats2/mast
 timezone_offset: 0
 #Control detail in logging 
 #0=off, 1=on, 2=debug
-log_detail: 2
+log_detail: 0
 #Mode can be isc or rdap
 mode: rdap
