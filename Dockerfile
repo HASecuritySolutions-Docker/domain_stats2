@@ -17,4 +17,4 @@ EXPOSE 8000
 
 STOPSIGNAL SIGTERM
 
-CMD cd /data && domain-stats .
+CMD domain-stats /data
