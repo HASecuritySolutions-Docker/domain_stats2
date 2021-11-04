@@ -7,7 +7,8 @@ RUN apt update \
   && pip3 install pyyaml rdap domain_stats python-whois setuptools flask diskcache gunicorn requests python-dateutil publicsuffixlist \
   && apt clean \
   && useradd -ms /bin/bash domain_stats \
-  && mkdir -p /data
+  && mkdir -p /data \ &&
+  && chown -R domain_stats:domain_stats /data
 COPY data /data/
 
 USER domain_stats
@@ -16,4 +17,4 @@ EXPOSE 8000
 
 STOPSIGNAL SIGTERM
 
-CMD cd /data && domain_stats .
+CMD cd /data && domain-stats .
