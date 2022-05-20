@@ -1,8 +1,9 @@
-FROM python:3.8-slim
+FROM python:slim
 
 MAINTAINER Justin Henderson justin@hasecuritysolutions.com
 
 RUN apt update \
+  && apt dist-upgrade -y \
   && apt install python3-pip curl -y \
   && pip3 install pyyaml rdap domain_stats python-whois setuptools flask diskcache gunicorn requests python-dateutil publicsuffixlist \
   && apt clean \
