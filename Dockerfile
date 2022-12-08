@@ -1,4 +1,4 @@
-FROM python:slim
+FROM python:3-slim-bullseye
 
 MAINTAINER Justin Henderson justin@hasecuritysolutions.com
 
